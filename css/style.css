@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Rubik:wght@300;400;500&display=swap');
+
+html, body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1B2838;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.py-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* CSS THÃŠM CHO SLIDER */
+.slider-box .slick-prev, .slider-box .slick-next {
+    background: rgba(0,0,0,0.3);
+    width: 45px;
+    height: 108px;
+    transition: all 0.258 ease-in-out;
+}
+
+.slider-box .slick-prev:hover, .slider-box .slick-next:hover {
+    background-image: linear-gradient(to right, rgba(0,0,0,0) , #3F5567);
+}
+
+.slider-box .slick-next {
+    right: -40px;
+}
+
+.slider-box .slick-prev {
+    left: -40px;
+}
+
+.slider-box  .slick-next:before, 
+.slider-box .slick-prev:before {  
+    font-family: "FontAwesome";
+    font-size: 60px;
+}
+
+.slider-box .slick-prev:before {
+    content: "\f104";
+}
+.slider-box  .slick-next:before {
+    content: "\f105";
+}
+
+/* Dots */
+.slick-dots li button:before {
+    width: 15px;
+    height: 9px;
+    background-color: red;
+    font-size: 0;
+    margin: 12px 0;
+}
+
+
+
+/* CSS CHO Ná»˜I DUNG */
+.title {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.slider-box {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.category__items {    
+    padding: 0 15px;
+    position: relative;
+    transition: all .2s;
+    display: block;
+}
+
+.category__items:hover {
+    transform: scale(1.05);
+}
+
+.category__item-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.category__item-image::after {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    z-index: 2;
+    transition: all .25 ease-in-out;
+}
+
+.category__items:hover .category__item-image::after {
+    filter: brightness(1.25);
+}
+
+.category__items img {
+    width: 100%;
+    display: block;
+}
+
+.category__item-text {
+    position: absolute;
+    bottom: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+    left: 0;
+}
+
+.category__item-image.style-1::after {
+    background-image: linear-gradient(rgba(0,0,0,0), rgb(255, 0, 0) 100%)!important; 
+}
+
+.category__item-image.style-2::after {
+    background-image: linear-gradient(rgba(0,0,0,0), rgb(255, 0, 208) 100%)!important; 
+}
+
+.category__item-image.style-3::after {
+   background-image: linear-gradient(rgba(0,0,0,0), rgb(255, 230, 0) 100%)!important;
+}
+
+.category__item-image.style-4::after {
+    background-image: linear-gradient(rgba(0,0,0,0), rgb(0,139,139) 100%);
+}
